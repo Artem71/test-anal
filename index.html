@@ -6,9 +6,37 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-P26WVHCCRB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-P26WVHCCRB');
+  </script>
   <script src="https://unpkg.com/vue@next"></script>
 </head>
 <body>
   <h1>hello world</h1>
+  <div id="app"></div>
 </body>
+<script>
+  console.log(Vue)
+  Vue.createApp({
+    template: `
+      <div class="wrapper">
+        <button @click="onClick">Click</button>
+      </div>
+    `,
+    data() {
+      return { hi: 1123 }
+    },
+    methods: {
+      onClick() {
+        console.log('click')
+      }
+    }
+  }).mount('#app')
+</script>
 </html>
