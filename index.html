@@ -35,6 +35,13 @@
     methods: {
       onClick() {
         console.log('click')
+        window.dataLayer.push({
+          'event': 'dl',
+          'eventName': 'login_success',
+          'user_id' :1,
+          'client_name': 'ВкуссВилл',
+          'client_id': 1
+        })
       }
     }
   }).mount('#app')
