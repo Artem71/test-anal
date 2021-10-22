@@ -22,7 +22,6 @@
   <div id="app"></div>
 </body>
 <script>
-  console.log(Vue)
   Vue.createApp({
     template: `
       <div class="wrapper">
@@ -38,6 +37,13 @@
         window.dataLayer.push({
           'event': 'dl',
           'eventName': 'login_success',
+          'user_id' :1,
+          'client_name': 'ВкуссВилл',
+          'client_id': 1
+        })
+        window.dataLayer.push({
+          'event': 'dl',
+          'eventName': 'click_test',
           'user_id' :1,
           'client_name': 'ВкуссВилл',
           'client_id': 1
